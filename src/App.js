@@ -13,6 +13,15 @@ function App() {
 
     SetTopAnime(temp.top.slice(0,5));
   }
+  const HandleSearch = e => {
+    e.preventDefault();
+    FetchAnime (search);
+  }
+  const FetchAnime = async (query) => {
+    const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=10`)
+    .then(res => res.json());
+    SetAnimeList(temp.results);
+  }
 
   useEffect(() => {
      GetTopAnime();
@@ -25,7 +34,11 @@ function App() {
      <div className="content-wrap">
         <Sidebar 
           topAnime={topAnime} />
-          <MainContent/>
+          <MainContent
+          HandleSearch={HandleSearch}
+          search={search}
+          SetSearch={SetSearch}
+          animeList={animeList} />
 
      </div>
     </div>
