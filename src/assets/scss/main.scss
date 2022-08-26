@@ -16,7 +16,7 @@ header{
         }
     }
 }
-.content-Wrap {
+.content-wrap{
     display: flex;
     
     aside{
@@ -84,7 +84,7 @@ header{
 
                     transition: 0.4s;
 
-                    ::placeholder {
+                    /* ::placeholder {
                         color: #888;
                     }
 
@@ -92,7 +92,7 @@ header{
                     &:focus,&:valid{
                         background-color: #313131;
                         color: #fff;
-                        }
+                        } */
 
                     }
                 }
@@ -129,7 +129,8 @@ header{
                     }
                 }
             }
- 
+        }
+}
         
         
     
