@@ -26,7 +26,6 @@ function App() {
   useEffect(() => {
      GetTopAnime();
   },[])
-  console.log(topAnime);
   
   return (
     <div className="App">

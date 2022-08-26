@@ -4,7 +4,7 @@ import AnimeCard from './AnimeCard'
 function MainContent(props) {
   return (
     <main>
-        <div className='"main-head'>
+        <div className='main-head'>
             <form 
             className="search-box"
             onSubmit={props.HandleSearch}>
