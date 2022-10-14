@@ -12,9 +12,10 @@ function App() {
     .then(res => res.json())
     .catch(err => console.log(err))
     
-
+    SetAnimeList(temp.data)
     SetTopAnime(temp.data.slice(0,5));
   }
+  
   const HandleSearch = e => {
     e.preventDefault();
     FetchAnime(search);
@@ -26,18 +27,6 @@ function App() {
     SetAnimeList(resData.data)
     console.log(resData)
   }
-
- /*  const FetchAnime = async (query) => {
-    const temp = await fetch(`https://api.jikan.moe/v4/anime/?q=${query}&order_by=title&sort=asc&limit=10`,{
-      method: 'GET',
-      headers:{'Accept':'application/json',
-      'Content-Type':'application/json'},
-      mode: 'no-cors',cache: 'default'})
-    .then(res => res.json())
-    .catch(err => console.log(err));
-    console.log(temp)
-    SetAnimeList(temp)
-  } */
 
   useEffect(() => {
      GetTopAnime();
