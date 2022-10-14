@@ -7,8 +7,8 @@ function AnimeCard({anime}) {
         rel='noreferrer'>
             <figure>
                 <img 
-                src={anime.image_url}
-                alt="anime image" />
+                src={anime.images.jpg.large_image_url}
+                alt={anime.title} />
             </figure>
             <h3>{anime.title}</h3>
         </a>
